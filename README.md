@@ -21,3 +21,12 @@ The programm is invoked with the folowing flags: <br>
 
 Only one, -i or -o have to be specified, if both are specified they have to match with the number of columns in the table.
 In verbose mode, additonal graphical representations of the intermediate steps are printed to the console, this might slow down the program significantly.
+
+## Building ##
+To build the project only an C++23 compatible compiler is required to be available.
+The build script (`build.meta`) asumes an symbolic link `win-amd-64-g++` to the compiler to exist, but it can be changed to whatever is required in the build file.
+The script also assumes mingw64 as compiler for windows, for other compilers the `-static-libgcc` and `-static-libstdc++` flags might need to be removed.
+
+The programm should compile fine on linux and other operating systems as well, it does not use any os specific functionality, only normal console input/output.
+
+To invoke the build in the project directory (the LOPT-Solver folder) type `./metaw build`
