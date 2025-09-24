@@ -124,7 +124,6 @@ int climain(std::string cmdname, std::vector<std::string> args)
 	for (unsigned int i = 0; i < args.size(); i++)
 	{
 		std::string flag = args[i];
-		wprintf(L"TEST %s\n", flag.c_str());
 		if (i != args.size() - 1) {
 			std::string val = args[i + 1];
 			if (flag == "-tt") {
