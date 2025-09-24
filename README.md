@@ -13,11 +13,11 @@ The tables for the program only have two requirements:
 - Each cell either has 1/TRUE for logical true, 0/FALSE for logical false or any other value (including an empty string) for don't care.
 
 ## Command Line Parameters ##
-The programm is invoked with the folowing flags:
--tt [...] the path to the truth table file
--i [...] the number of inputs in the truth table
--o [...] the number of outputs in the truth table
--v verbose mode
+The programm is invoked with the folowing flags: <br>
+ `-tt [...]` the path to the truth table file <br>
+ `-i [...]` the number of inputs in the truth table <br>
+ `-o [...]` the number of outputs in the truth table <br>
+ `-v` verbose mode <br>
 
 Only one, -i or -o have to be specified, if both are specified they have to match with the number of columns in the table.
 In verbose mode, additonal graphical representations of the intermediate steps are printed to the console, this might slow down the program significantly.
