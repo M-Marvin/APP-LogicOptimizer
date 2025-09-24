@@ -1,0 +1,21 @@
+import de.m_marvin.metabuild.cpp.script.CppMultiTargetBuildScript;
+
+public class Buildfile extends CppMultiTargetBuildScript {
+	
+	@Override
+	public void init() {
+		
+		projectName = "lopt-solver";
+		
+		var target = makeTarget("WinAMD64", "lopts.exe");
+		target.compileCpp.compiler = target.linkCpp.linker = "win-amd-64-g++";
+		target.compileCpp.options.add("-std=c++2b");
+		target.compileCpp.options.add("-O3");
+		target.linkCpp.options.add("-static-libgcc");
+		target.linkCpp.options.add("-static-libstdc++");
+		
+		super.init();
+		
+	}
+	
+}
